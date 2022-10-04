@@ -1,0 +1,23 @@
+$color-1 : #FF6060;
+$color-2 : #FFFFFF;
+$color-3 : #E5E5E5;
+$color-4 : #F7F7F7;
+$color-5 : #000000;
+
+$breakpoints: (
+    mobile: 600px,
+    tablettes : 1200px,
+    largeScreen : 1800px,
+);
+
+$font-1 : 'Montserrat', sans-serif;
+
+$font-weight-1 : 500;
+$font-weight-2 : 400;
+
+$font-size-1: 228px;
+$font-size-2: 36px;
+$font-size-3: 24px;
+$font-size-4 : 18px;
+
+$linear-gradient : linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
