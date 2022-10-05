@@ -1,5 +1,3 @@
-import React, { startTransition } from 'react';
-
 const Rating = ({ rating }) => {
     
     const star = <i style={{color: '#FF6060'}} className="fa-solid fa-star"></i>
@@ -18,7 +16,7 @@ const Rating = ({ rating }) => {
     return (
         <>
             {
-               stars.map(e => {return <span>{e}</span>})
+               stars.map((e, index) => {return <span key={index}>{e}</span>})
             }
         </>
     );

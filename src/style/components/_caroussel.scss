@@ -1,0 +1,35 @@
+.caroussel {
+    height: 255px;
+    position: relative;
+    .caroussel-left, .caroussel-right{
+        position: absolute;
+        color: $color-2;
+        font-size: 80px;
+
+    }
+    .caroussel-left{
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .caroussel-right{
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .caroussel-count{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        span{
+            color: $color-2;
+            font-weight: $font-weight-1;
+            font-size: $font-size-4;
+        }
+
+    }
+    img{
+        height: 100%;
+    }
+}
