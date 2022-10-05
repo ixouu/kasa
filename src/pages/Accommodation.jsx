@@ -32,10 +32,10 @@ const Accommodation = () => {
                         <Rating rating={accommodation.rating}/>
                     </div>
                     <div className="accommodation-desc">
-                        <Dropdown props={accommodation.description}/>
+                        <Dropdown props={accommodation.description} title={"description"}/>
                     </div>
                     <div className="accommodation-equipements">
-                        <Dropdown props={accommodation.equipments}/>
+                        <Dropdown props={accommodation.equipments}title={"équipements"}/>
                     </div>
                 </div>
             </div>
