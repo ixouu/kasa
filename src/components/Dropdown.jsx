@@ -28,7 +28,9 @@ const Dropdown = ({ props, title }) => {
                 <button 
                     type='button'
                     onClick={() => handleClick()}
-                    ><i class="fa-solid fa-chevron-down"></i>
+                >{
+                    isDown? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>
+                }
                 </button>
             </div>
             {isDown && 
