@@ -1,36 +1,11 @@
-import React, {useState, useEffect} from 'react';
 import BackgroundImage from '../images/background.png';
 import { Link } from 'react-router-dom';
+import Accommodations from '../accommodations.json'
 
 const Home = () => {
 
-    const [data, setData] = useState([])
-
-    useEffect(() => {
-        getData()
-    },[])
-
-    const getData = async () => {
-        try{
-            await fetch('../logements.json'
-            ,{
-                headers : { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-                }
-            }
-            )
-                .then(res => {
-                return res.json();
-                })
-                .then( myJson => {
-                setData(myJson);
-                });
-        }catch (error) {
-            console.log(error)
-        }
-    }
-
+    const data = Accommodations
+ 
     return (
         <main>
             <div className='main-banner'>
@@ -38,15 +13,14 @@ const Home = () => {
                 <h1> Chez vous, partout et ailleurs</h1>
             </div>
             <section className='main-accommodations'>
-                {
-                    data.map((elem) => {return(
-                        <Link to ={`logement/${elem.id}`} key={elem.id}>
+              {data.map((elem) => {return(
+                        <Link to ={`logement/${elem.id}`} key={elem.id} data1={data}>
                             <article className='accommodation-card'>
                                     <h2>{elem.title}</h2>
                             </article>
                         </Link>
                     )})
-                }
+                } 
             </section>
         </main>
     );
