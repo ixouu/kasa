@@ -41,17 +41,7 @@ const Home = () => {
                 {
                     data.map((elem) => {return(
                         <Link to ={`logement/${elem.id}`} key={elem.id}>
-                            <article 
-                                id={elem.id} 
-                                cover={elem.cover}
-                                desc={elem.description} 
-                                equipments={elem.equipments} 
-                                host={elem.host} 
-                                pictures={elem.pictures} 
-                                rating={elem.rating}
-                                tags={elem.tags}
-                                title={elem.title}
-                                >
+                            <article className='accommodation-card'>
                                     <h2>{elem.title}</h2>
                             </article>
                         </Link>
