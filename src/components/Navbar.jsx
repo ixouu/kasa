@@ -1,10 +1,22 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Logo from './Logo';
 
 const Navbar = () => {
     return (
-        <div>
-            Navbar
-        </div>
+        <header>
+            <Logo/>
+            <nav>
+                <ul>
+                    <li>
+                        <NavLink to='/' style={({ isActive }) => ({ textDecoration : isActive? "underline" : 'none' })}>Accueil</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/a-propos' style={({ isActive }) => ({ textDecoration : isActive? "underline" : 'none'})}>A Propos</NavLink>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     );
 }
 
