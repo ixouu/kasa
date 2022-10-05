@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Tag = () => {
+const Tag = ({tags}) => {
     return (
-        <div>
-            TAG
+        <div className='tags'>
+            {
+                tags.map((element, index) => {
+                    return (<span key={index}>{element}</span>)
+                })
+            }
         </div>
     );
 }
