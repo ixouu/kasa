@@ -1,4 +1,4 @@
-import BackgroundImage from '../images/background.png';
+import forestMobile from '../images/forestMobile.png';
 import { Link } from 'react-router-dom';
 import Accommodations from '../accommodations.json'
 
@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <main>
             <div className='main-banner'>
-                <img src={BackgroundImage} alt="image de nature" />
+                <img src={forestMobile} alt="image de forêt" />
                 <h1> Chez vous, partout et ailleurs</h1>
             </div>
             <section className='main-accommodations'>

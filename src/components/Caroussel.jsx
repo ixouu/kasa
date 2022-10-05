@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Caroussel = () => {
+const Caroussel = ({ images }) => {
+
+    console.log(images)
     return (
-        <div>
-            Caroussel
+        <div className='caroussel'>
+            {
+                images.map(i =>  <img src={i} alt='Previsualisation du logement'></img>)
+            }
         </div>
     );
 }
