@@ -7,7 +7,9 @@ import Accommodations from '../accommodations.json'
 
 const Accommodation = () => {
 
-    const { id } = useParams()
+    document.title = 'Kasa - A propos';
+    
+    const { id } = useParams();
     const accommodation = Accommodations.find((object) => object.id === id);
 
     return (
@@ -24,20 +26,24 @@ const Accommodation = () => {
                     </div>
                 </div>
                 <div className="accommodation-header_right">
-                    <div className="accommodation-owner">
-                        <span>{accommodation.host.name}</span>
-                        <img src={`${accommodation.host.picture}`} alt={`Photo de ${accommodation.host.name}`} />
+                    <div className="accommodation-ownerContainer">
+                        <div className="accommodation-rating">
+                            <Rating rating={accommodation.rating}/>
+                        </div>
+                        <div className="accommodation-owner">
+                            <span>{accommodation.host.name}</span>
+                            <img src={`${accommodation.host.picture}`} alt={`Photo de ${accommodation.host.name}`} />
+                        </div>
                     </div>
-                    <div className="accommodation-rating">
-                        <Rating rating={accommodation.rating}/>
-                    </div>
+                </div>
+            </div>
+            <div className="accommodation-dropdowns">
                     <div className="accommodation-desc">
                         <Dropdown props={accommodation.description} title={"description"}/>
                     </div>
                     <div className="accommodation-equipements">
                         <Dropdown props={accommodation.equipments}title={"équipements"}/>
                     </div>
-                </div>
             </div>
         </main>
     );

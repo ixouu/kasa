@@ -1,9 +1,27 @@
-import kasaLogo from '../images/Vector.svg'
+import { useEffect, useState } from 'react';
+import LogoMobile from '../images/logoMobile.png';
+import LogoImg from '../images/logo.png'
+import { useNavigate } from 'react-router-dom';
 
 
 const Logo = () => {
+
+    const navigate = useNavigate()
+
+    const [size, setSize] = useState(window.innerWidth)
+
+    useEffect(() => {
+        const handleResize = () => {
+            setSize(window.innerWidth)
+        }
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    },[])
+
     return (
-            <span className='logo'>K<img src={kasaLogo} alt='logo representant une maison'></img>sa</span>
+        size < 375 ? <img src={LogoMobile} alt="logo de Kasa" onClick={() => navigate('/')}/ > : <img src={LogoImg} alt="logo de Kasa" onClick={() => navigate('/')}/>
     );
 }
 

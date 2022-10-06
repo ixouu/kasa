@@ -1,10 +1,10 @@
 import React from 'react';
-import Logo from './Logo';
+import logoMobileWhite from '../images/logoMobileFooter.png'
 
 const Footer = () => {
     return (
         <footer>
-            <Logo />
+            <img src={logoMobileWhite} alt="Logo de Kasa" />
             <span>© 2020 Kasa. All rights reserved</span>
         </footer>
     );

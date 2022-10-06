@@ -1,19 +1,36 @@
 .caroussel {
     height: 255px;
     position: relative;
+    @include tablettes-only{
+        height: 30vh;
+    }
+    @include desktop-only{
+        height: 415px
+    }
+    @include largeScreen-only{
+        height: 30vh;
+    }
     .caroussel-left, .caroussel-right{
         position: absolute;
         color: $color-2;
-        font-size: 80px;
-
+        font-size: 30px;
+        @include tablettes-only{
+            font-size: 55px;
+        }
+        @include desktop-only{
+            font-size: 80px;
+        }
+        @include largeScreen-only{
+            font-size: 95px;
+        }
     }
     .caroussel-left{
-        left: 0;
+        left: 6px;
         top: 50%;
         transform: translateY(-50%);
     }
     .caroussel-right{
-        right: 0;
+        right: 6px;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -31,5 +48,16 @@
     }
     img{
         height: 100%;
+        border-radius: 10px;
+        width: 100%;
+        @include tablettes-only{
+            width: 100%;
+        }
+        @include desktop-only{
+            width: 100%;
+        }
+        @include largeScreen-only{
+            width: 100%;
+        }
     }
 }

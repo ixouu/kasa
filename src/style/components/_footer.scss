@@ -1,0 +1,23 @@
+footer{
+    height: 209px;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-5 ;
+    color : $color-2;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-5;
+
+    span{
+        padding-top: 30px;
+        @include tablettes-only{
+            font-size: $font-size-4;
+        }
+        @include desktop-only{
+            font-size: $font-size-3;
+        }
+        @include largeScreen-only{
+            font-size: $font-size-3;
+        }
+    }
+}

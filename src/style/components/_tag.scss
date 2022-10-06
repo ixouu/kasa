@@ -1,0 +1,28 @@
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    span{
+        color: $color-2;
+        background-color: $color-1;
+        border-radius: 5px;
+        padding: 3px 10px;
+        font-size: 10px;
+        margin: 10px;
+        flex-wrap: nowrap;
+        @include tablettes-only{
+            padding: 3px 20px;
+            font-size: $font-size-6;
+            border-radius: 10px;
+        }
+        @include desktop-only{
+            padding: 3px 41px;
+            font-size: $font-size-6;
+            border-radius: 10px;
+        }
+        @include largeScreen-only{
+            padding: 3px 41px;
+            font-size: $font-size-6;
+            border-radius: 10px;
+        }
+    }
+}

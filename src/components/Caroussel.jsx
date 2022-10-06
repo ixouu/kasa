@@ -10,7 +10,7 @@ const Caroussel = ({ images }) => {
         setPicData(images);
         setDataLength(images.length);
         ;
-    },[]);
+    },[images]);
 
     useEffect(() =>{
         setTimeout(() => {
@@ -20,6 +20,7 @@ const Caroussel = ({ images }) => {
                 setPicNumber(1)
             }
         },5000)
+        return clearTimeout()
     },[picNumber, dataLength])
     
     const prevPic = () => {

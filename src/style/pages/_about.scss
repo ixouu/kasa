@@ -1,0 +1,28 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    @include desktop-only{
+        align-items: center;
+    }
+    @include largeScreen-only{
+        align-items: center;
+    }
+    img{
+        border-radius: 5px;
+        padding-bottom: 19px;
+        @include tablettes-only{
+            border-radius: 25px;
+            width: 100%;
+        }
+        @include desktop-only{
+            border-radius: 25px;
+            width: 100%;
+        }
+        @include largeScreen-only{
+            border-radius: 25px;
+        }
+    }
+    .dropdown-content{
+        min-height: 140px;
+    }
+}

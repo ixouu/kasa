@@ -1,24 +1,48 @@
+import { useEffect, useState } from 'react';
+
 import forestMobile from '../images/forestMobile.png';
-import { Link } from 'react-router-dom';
+import forest from '../images/forest.png'
+import { useNavigate } from 'react-router-dom';
 import Accommodations from '../accommodations.json'
 
 const Home = () => {
 
-    const data = Accommodations
+    const data = Accommodations;
+    const navigate = useNavigate();
+    document.title = 'Kasa - Acceuil';
+
+
+    const [size, setSize] = useState(window.innerWidth)
+
+
+    useEffect(() => {
+        const handleResize = () => {
+            setSize(window.innerWidth)
+        }
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    },[])
  
     return (
-        <main>
+        <main className='home'>
             <div className='main-banner'>
-                <img src={forestMobile} alt="image de forêt" />
+                {size < 375? <img src={forestMobile} alt="image de forêt" /> : <img src={forest} alt="image de forêt" />}
                 <h1> Chez vous, partout et ailleurs</h1>
             </div>
             <section className='main-accommodations'>
               {data.map((elem) => {return(
-                        <Link to ={`logement/${elem.id}`} key={elem.id} data1={data}>
-                            <article className='accommodation-card'>
+                            <article 
+                                key={elem.id} 
+                                className='accommodation-card' 
+                                onClick={() => navigate(`logement/${elem.id}`)}
+                                style={{backgroundImage: `url(${elem.cover})`}}
+                            >
+                                <div className='accommodation-card-filter'>
                                     <h2>{elem.title}</h2>
+                                </div>
                             </article>
-                        </Link>
                     )})
                 } 
             </section>
