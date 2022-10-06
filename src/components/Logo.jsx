@@ -1,9 +1,9 @@
-import kasaLogo from '../images/Vector.svg'
+import KasaLogoMobile from '../images/logoMobile.png'
 
 
 const Logo = () => {
     return (
-            <span className='logo'>K<img src={kasaLogo} alt='logo representant une maison'></img>sa</span>
+            <img src={KasaLogoMobile} alt='logo de Kasa'></img>
     );
 }
 

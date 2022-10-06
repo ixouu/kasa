@@ -1,0 +1,21 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    nav{
+        ul{
+            display: flex;
+            li, a{
+                color : $color-1;
+                text-decoration: none;
+                list-style: none;
+                text-transform: uppercase;
+                font-size: $font-size-5;
+                &:last-child{
+                    margin-left: 10px;
+                }
+            }
+            
+        }
+    }
+}

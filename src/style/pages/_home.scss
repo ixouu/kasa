@@ -1,0 +1,42 @@
+.main-banner{
+    position: relative;
+    img{
+        border-radius: 10px;
+        mix-blend-mode: darken;
+        filter: brightness(0.6);
+    }
+    h1{
+        color: $color-2;
+        font-weight: $font-weight-1;
+        position: absolute;
+        font-size: $font-size-3;
+        top: 35%;
+        transform: translateY(-50%);
+        left: 16px;
+    }
+}
+
+.accommodation-card{
+    height: 255px;
+    border-radius: 10px;
+    background-color: $color-1;
+    margin: 20px 0;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    .accommodation-card-filter{
+        height: 255px;
+        width: 100%;
+        position: absolute;
+        background-image: $linear-gradient;
+        display: flex;
+        flex-direction: column-reverse;
+        h2{
+            color: $color-2;
+            text-decoration: none;
+            font-weight: $font-weight-1;
+            font-size: $font-size-4;
+            padding: 6%;
+        }
+    }
+}
