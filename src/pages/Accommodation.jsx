@@ -24,12 +24,14 @@ const Accommodation = () => {
                     </div>
                 </div>
                 <div className="accommodation-header_right">
-                    <div className="accommodation-owner">
-                        <span>{accommodation.host.name}</span>
-                        <img src={`${accommodation.host.picture}`} alt={`Photo de ${accommodation.host.name}`} />
-                    </div>
-                    <div className="accommodation-rating">
-                        <Rating rating={accommodation.rating}/>
+                    <div className="accommodation-ownerContainer">
+                        <div className="accommodation-rating">
+                            <Rating rating={accommodation.rating}/>
+                        </div>
+                        <div className="accommodation-owner">
+                            <span>{accommodation.host.name}</span>
+                            <img src={`${accommodation.host.picture}`} alt={`Photo de ${accommodation.host.name}`} />
+                        </div>
                     </div>
                     <div className="accommodation-desc">
                         <Dropdown props={accommodation.description} title={"description"}/>

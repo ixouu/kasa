@@ -4,16 +4,15 @@
     .caroussel-left, .caroussel-right{
         position: absolute;
         color: $color-2;
-        font-size: 80px;
-
+        font-size: 30px;
     }
     .caroussel-left{
-        left: 0;
+        left: 6px;
         top: 50%;
         transform: translateY(-50%);
     }
     .caroussel-right{
-        right: 0;
+        right: 6px;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -31,5 +30,7 @@
     }
     img{
         height: 100%;
+        border-radius: 10px;
+        width: 100%;
     }
 }

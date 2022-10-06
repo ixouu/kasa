@@ -34,7 +34,7 @@ const Dropdown = ({ props, title }) => {
                 </button>
             </div>
             {isDown && 
-                <div className='dropdown-content'>
+                <div className={isDown? 'dropdown-content  dropdown-active' : 'dropdown-content'}>
                     {displayProps()}
                 </div>
             }
