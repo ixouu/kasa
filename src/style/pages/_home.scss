@@ -1,0 +1,152 @@
+.home{
+    display: flex;
+    flex-direction: column;
+
+}
+.main-banner{
+    position: relative;
+    align-self: center;
+    img{
+        border-radius: 10px;
+        mix-blend-mode: darken;
+        filter: brightness(0.6);
+        @include tablettes-only{
+            width: 100%;
+        }
+        @include desktop-only{
+            width: 100%;
+        }
+        @include largeScreen-only{
+            width: 100%;
+        }
+    }
+    h1{
+        color: $color-2;
+        font-weight: $font-weight-1;
+        position: absolute;
+        font-size: $font-size-3;
+        top: 35%;
+        transform: translateY(-50%);
+        width: 65%;
+        left: 16px;
+        
+        @include tablettes-only{
+            top : 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            width: 100%;
+            text-align: center;
+        }
+        @include desktop-only{
+            top : 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            width: 100%;
+            text-align: center;
+        }
+        @include largeScreen-only{
+            top : 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.main-accommodations{
+
+    @include tablettes-only{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-3;
+        border-radius: 25px;
+    }
+    @include desktop-only{
+        margin: 100px 0 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 56px 50px;
+        justify-content: space-evenly;
+        background-color: $color-3;
+        border-radius: 25px;
+    }
+    @include largeScreen-only{
+        margin: 100px 0 100px 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 56px 50px;
+        justify-content: space-evenly;
+        background-color: $color-3;
+        border-radius: 25px;
+    };
+}
+
+.accommodation-card{
+    height: 255px;
+    border-radius: 10px;
+    background-color: $color-1;
+    margin: 20px 0;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    @include tablettes-only{
+        width: 90%;
+    }
+    @include desktop-only{
+        height: 340px;
+        width: 340px;
+        // margin: 20px 30px;
+        
+    }
+    @include largeScreen-only{
+        height: 340px;
+        width: 340px;
+        // margin: 20px 30px;
+    }
+    &:hover{
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    
+    .accommodation-card-filter{
+        height: 255px;
+        width: 100%;
+        position: absolute;
+        background-image: $linear-gradient;
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 10px;
+    
+        @include desktop-only{
+            height: 340px;
+            width: 340px;
+        }
+        @include largeScreen-only{
+            height: 340px;
+            width: 340px;
+        }
+
+        h2{
+            color: $color-2;
+            text-decoration: none;
+            font-weight: $font-weight-1;
+            font-size: $font-size-4;
+            padding: 6%;
+            @include tablettes-only{
+                padding: 20px;
+            }
+            @include desktop-only{
+                padding: 20px;
+            }
+            @include largeScreen-only{
+                padding: 20px;
+            }
+        }
+    }
+}

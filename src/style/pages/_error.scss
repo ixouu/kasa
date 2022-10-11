@@ -1,0 +1,31 @@
+.error{
+    min-height: 70vh;
+    color : $color-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .error-titles{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1, h2{
+            margin: 0;
+        }
+        h1{
+            font-size: 96px;
+        }
+        h2{
+            font-size: $font-size-4;
+            text-align: center;
+        }
+    }
+    .errror-redirect{
+        text-align: center;
+        padding-top: 130px;
+        a{
+            color : $color-1;
+        }
+
+    }
+}

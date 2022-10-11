@@ -1,0 +1,114 @@
+.dropdown{
+    margin-bottom: 20px;
+    @include desktop-only{
+        width: 80%;
+    }
+    @include largeScreen-only{
+        width: 60%;
+    }
+    .dropdown-head{
+        background-color: $color-1;
+        color: $color-2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        height: 30px;
+        
+        @include tablettes-only{
+            height: 40px;
+        }
+        @include desktop-only{
+            height: 47px;
+        }
+        @include largeScreen-only{
+            height: 55px;
+        } 
+
+        h3{
+            margin: 0;
+            font-size: 13px;
+            padding-left: 6px;
+            text-transform: capitalize;
+            font-weight: $font-weight-1;
+            
+            @include tablettes-only{
+                font-size: $font-size-4;
+            }
+            @include desktop-only{
+                font-size: $font-size-3;
+            }
+            @include largeScreen-only{
+                font-size: $font-size-3;
+            } 
+
+        }
+        button{
+            border: 0;
+            background-color: transparent;
+            color: $color-2;
+            cursor: pointer;
+            @include tablettes-only{
+                padding-right: 16px;
+            }
+            @include desktop-only{
+                padding-right: 16px;
+                font-size: $font-size-4;
+            }
+            @include largeScreen-only{
+                padding-right: 20px;
+                font-size: $font-size-4;
+            }
+        }
+
+    }
+    .dropdown-content{
+        background-color: $color-3 ;
+        font-size: $font-size-5;
+        border-radius: 0 0 5px 5px;
+        transform-origin: top center;
+        @include tablettes-only{
+            font-size: $font-size-4;
+        }
+        @include desktop-only{
+            font-size: $font-size-3;
+        }
+        @include largeScreen-only{
+            font-size: $font-size-3;
+        }
+        ul, p{
+            list-style: none;
+            margin: 0;
+            padding: 23px 12px 5px 12px;
+            color: $color-1;
+            @include desktop-only{
+                padding-bottom: 28px;
+            }
+            @include largeScreen-only{
+                font-size: $font-size-3;
+                padding-bottom: 32px;
+            }
+        }
+    }
+    .dropdown-active{
+        animation: displayDropdown .3s linear 1 forwards;
+    }
+}
+
+@keyframes displayDropdown {
+    0%{
+        opacity: 0;
+        transform: scaleY(0)
+    }
+    50%{
+        opacity: 1;
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    
+}
