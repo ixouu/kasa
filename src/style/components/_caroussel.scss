@@ -5,10 +5,11 @@
         height: 30vh;
     }
     @include desktop-only{
-        height: 415px
+        height: 415px;
     }
     @include largeScreen-only{
-        height: 30vh;
+        height: 415px;
+        
     }
     .caroussel-left, .caroussel-right{
         position: absolute;

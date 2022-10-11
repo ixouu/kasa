@@ -1,6 +1,14 @@
 .accommodation{
     display: flex;
     flex-direction: column;
+    .caroussel{
+        @include desktop-only{
+        align-self: center;
+        }
+        @include largeScreen-only{
+            align-self: center;
+        }
+    }
 }
 .accommodation-header{
     color: $color-1;

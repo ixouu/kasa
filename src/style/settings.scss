@@ -23,6 +23,9 @@ header, main{
     padding: 0 7%;  
   } 
 }
+main{
+  min-height: 76vh;
+}
 header{
   padding-top: 20px;
 }
