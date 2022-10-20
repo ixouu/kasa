@@ -10,14 +10,19 @@
         border-radius: 10px;
         mix-blend-mode: darken;
         filter: brightness(0.6);
+        height: 111px;
         @include tablettes-only{
             width: 100%;
+            height: auto;
+            min-height: 111px;
         }
         @include desktop-only{
             width: 100%;
+            height: auto;
         }
         @include largeScreen-only{
             width: 100%;
+            height: auto;
         }
     }
     h1{
@@ -25,7 +30,7 @@
         font-weight: $font-weight-1;
         position: absolute;
         font-size: $font-size-3;
-        top: 35%;
+        top: 50%;
         transform: translateY(-50%);
         width: 65%;
         left: 16px;

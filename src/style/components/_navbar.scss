@@ -4,10 +4,21 @@ header{
     margin-bottom: 16px;
     img{
         cursor: pointer;
+        width: 145px;
+        height: 47px;
+        @include desktop-only{
+            width: auto;
+            height: auto;
+        }
+        @include largeScreen-only{
+            width: auto;
+            height: auto;
+        }
     }
     nav{
         ul{
             display: flex;
+            padding: 0;
             li, a{
                 color : $color-1;
                 text-decoration: none;
