@@ -1,6 +1,9 @@
 .caroussel {
     height: 255px;
     position: relative;
+    width: 100%;
+    background-color: #ff60608c;
+    border-radius: 10px;
     @include tablettes-only{
         height: 30vh;
     }
@@ -9,7 +12,6 @@
     }
     @include largeScreen-only{
         height: 415px;
-        
     }
     .caroussel-left, .caroussel-right{
         position: absolute;
@@ -50,15 +52,15 @@
     img{
         height: 100%;
         border-radius: 10px;
-        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         @include tablettes-only{
-            width: 100%;
         }
         @include desktop-only{
-            width: 100%;
         }
         @include largeScreen-only{
-            width: 100%;
         }
     }
 }

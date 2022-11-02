@@ -6,11 +6,12 @@ import Dropdown from '../components/Dropdown';
 import Accommodations from '../accommodations.json'
 
 const Accommodation = () => {
-
-    document.title = 'Kasa - A propos';
+    
     
     const { id } = useParams();
     const accommodation = Accommodations.find((object) => object.id === id);
+
+    document.title = `Kasa - ${accommodation.title}`
 
     return (
         <main className="accommodation">

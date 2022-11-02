@@ -13,14 +13,16 @@ const Caroussel = ({ images }) => {
     },[images]);
 
     useEffect(() =>{
-        setTimeout(() => {
+        const timer = () => {setTimeout(() => {
             if (picNumber < dataLength){
                 setPicNumber(picNumber+1)
             } else {
                 setPicNumber(1)
             }
-        },5000)
-        return clearTimeout()
+        
+        },5000);} 
+        timer();
+        return () =>  {clearTimeout(timer)}
     },[picNumber, dataLength])
     
     const prevPic = () => {
